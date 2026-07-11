@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 export const StoreContextProvider = ({ children }) => {
   const navigate = useNavigate();
 
-  const backendURL = "http://localhost:3000";
+  const backendURL = "https://finly-software-app-backend.onrender.com";
 
   const [token, setToken] = useState(null);
   const [authLoading, setAuthLoading] = useState(true);
