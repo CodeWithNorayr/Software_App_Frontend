@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background: #f8faff;
+  font-family: "Courier New", monospace;
+}
+
+.short-summary-section {
+
+  width: min(95%, 1700px);
+
+  margin: 40px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 25px;
+
+  align-items: stretch;
+
+}
+
+.home-section {
+
+  width: 100%;
+
+  min-height: 90px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px clamp(15px, 3vw, 40px);
+
+  background: white;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+  gap: 20px;
+
+}
+
+.finly-company-button {
+
+  width: clamp(130px, 15vw, 180px);
+
+  height: clamp(55px, 7vw, 70px);
+
+  font-size: clamp(26px, 3vw, 42px);
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #5865ff, #8b5cf6);
+
+  color: white;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: .3s;
+
+}
+
+.middle-navbar-section {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 80px;
+
+  font-size: 14px;
+
+}
+
+.dashboard-section,
+.transactions-section,
+.revenue-section-1,
+.expenses-section,
+.login-section,
+.signUp-section,
+.logout-section {
+
+  width: 100px;
+
+  min-height: 75px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 15px;
+
+  transition: .3s;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+}
+
+/* ==========================================
+   NAVBAR ICONS
+========================================== */
+
+.dashboard-image,
+.transaction-image,
+.revenue-image-1,
+.expense-image,
+.login-sect-image,
+.signUp-sect-image,
+.logout-image{
+
+    width:42px;
+    height:42px;
+
+    object-fit:contain;
+
+    display:block;
+
+    transition:0.3s ease;
+
+    flex-shrink:0;
+
+}
+
+.dashboard-section:hover .dashboard-image,
+.transactions-section:hover .transaction-image,
+.revenue-section-1:hover .revenue-image-1,
+.expenses-section:hover .expense-image,
+.login-section:hover .login-sect-image,
+.signUp-section:hover .signUp-sect-image,
+.logout-section:hover .logout-image{
+
+    transform:scale(1.1);
+}
+
+.total-revenue-section-home,
+.total-expenses-section-home,
+.gross-profit-section-home,
+.tax-section-home,
+.new-profit-section-home {
+
+  width: 100%;
+
+  min-height: 170px;
+
+  padding: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  border-radius: 22px;
+
+  background: white;
+
+  box-shadow: 0 10px 25px rgba(88, 101, 255, .12);
+
+  transition: .3s;
+
+}
+
+.total-revenue-section-home:hover,
+.total-expenses-section-home:hover,
+.gross-profit-section-home:hover,
+.tax-section-home:hover,
+.new-profit-section-home:hover {
+
+  transform: translateY(-6px);
+
+}
+
+@media(max-width:1024px) {
+
+  .home-section {
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+  }
+
+  .middle-navbar-section {
+
+    width: 100%;
+
+  }
+
+  .charts-section-home-page {
+
+    margin: 20px;
+
+  }
+
+}
+
+
+@media(max-width:768px) {
+
+  .home-section {
+
+    flex-direction: column;
+
+    padding: 15px;
+
+  }
+
+  .middle-navbar-section {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    width: 100%;
+
+    gap: 15px;
+
+  }
+
+  .dashboard-section,
+  .transactions-section,
+  .revenue-section-1,
+  .expenses-section,
+  .login-section,
+  .signUp-section,
+  .logout-section {
+
+    width: 100%;
+
+  }
+
+  .login-register-section {
+
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+  }
+
+  .charts-section-home-page {
+
+    margin: 15px;
+
+  }
+
+  .short-summary-section {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+@media(max-width:480px) {
+
+  .middle-navbar-section {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .dashboard-section,
+  .transactions-section,
+  .revenue-section-1,
+  .expenses-section,
+  .login-section,
+  .signUp-section,
+  .logout-section {
+
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    padding: 15px;
+
+    gap: 15px;
+
+  }
+
+  .home-section {
+
+    background: white;
+
+    box-shadow: none;
+
+  }
+
+}
+
+@media(max-width:320px) {
+
+  .finly-company-button {
+
+    width: 120px;
+
+    font-size: 24px;
+
+  }
+
+  .dashboard-p,
+  .transactions-p,
+  .revenue-p,
+  .expenses-p,
+  .login-p,
+  .signUp-p,
+  .logout-p {
+
+    font-size: 13px;
+
+  }
+
+}

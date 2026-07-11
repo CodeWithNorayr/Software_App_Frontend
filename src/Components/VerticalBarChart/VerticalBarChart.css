@@ -1,0 +1,85 @@
+.vertical-bar-chart-container{
+
+
+  width:100%;
+
+  max-width:1000px;
+
+  height:450px;
+
+  margin:auto;
+
+  padding:20px;
+
+  background:white;
+
+  border-radius:16px;
+
+  box-sizing:border-box;
+
+  overflow:hidden;
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+.vertical-bar-chart-container{
+
+
+  height:350px;
+
+  padding:15px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+@media(max-width:360px){
+
+
+.vertical-bar-chart-container{
+
+
+  height:300px;
+
+  padding:8px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:250px){
+
+
+.vertical-bar-chart-container{
+
+
+  height:250px;
+
+  padding:3px;
+
+
+}
+
+
+}

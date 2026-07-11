@@ -1,0 +1,730 @@
+/* =====================================
+   FINANCIAL STATEMENT PAGE
+===================================== */
+
+
+.financial-statement-page {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background: #f5f7fb;
+
+  overflow-x: hidden;
+
+}
+
+
+
+
+.fin-sect-title-h1 {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+}
+
+
+.fin-sect-title-h1 h1 {
+
+  font-size: 32px;
+
+  text-align: center;
+
+}
+
+
+
+
+
+/* =====================================
+ MAIN GRID
+===================================== */
+
+
+.financial-statement-page-div {
+
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  align-items: start;
+
+}
+
+
+
+
+
+
+/* =====================================
+ CARDS
+===================================== */
+
+
+.financial-statement-section,
+.financial-statement-expenses-section,
+.financial-statement-revenue-section {
+
+
+  background: white;
+
+
+  padding: 30px;
+
+
+  border-radius: 18px;
+
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+
+
+  transition: .3s ease;
+
+
+  border: 1px solid rgba(0, 0, 0, .05);
+
+
+  overflow: hidden;
+
+}
+
+
+
+.financial-statement-section:hover,
+.financial-statement-expenses-section:hover,
+.financial-statement-revenue-section:hover {
+
+
+  transform: translateY(-5px);
+
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, .12);
+
+
+}
+
+
+
+
+
+/* =====================================
+ ROWS
+===================================== */
+
+
+.financial-statement-section p,
+.financial-statement-expenses-section p,
+.financial-statement-revenue-section p {
+
+
+  display: flex;
+
+
+  justify-content: space-between;
+
+
+  align-items: center;
+
+
+  gap: 15px;
+
+
+  padding: 14px 0;
+
+
+  margin: 0;
+
+
+  border-bottom: 1px solid #eeeeee;
+
+
+  font-size: 20px;
+
+
+  color: #333;
+
+
+  line-height: 1.4;
+
+
+}
+
+
+
+
+
+.financial-statement-section p:last-child,
+.financial-statement-expenses-section p:last-child,
+.financial-statement-revenue-section p:last-child {
+
+
+  border-bottom: none;
+
+
+  margin-top: 15px;
+
+
+  padding-top: 20px;
+
+
+  font-size: 22px;
+
+
+  font-weight: 700;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+ TEXT
+===================================== */
+
+
+.financial-statement-section strong,
+.financial-statement-expenses-section strong,
+.financial-statement-revenue-section strong {
+
+
+  font-weight: 600;
+
+
+  color: #1f2937;
+
+
+  display: flex;
+
+
+  justify-content: space-between;
+
+
+  gap: 15px;
+
+
+  width: 100%;
+
+
+  overflow-wrap: anywhere;
+
+
+}
+
+
+
+
+.financial-statement-section span,
+.financial-statement-expenses-section span,
+.financial-statement-revenue-section span {
+
+
+  font-weight: 700;
+
+
+  color: #2563eb;
+
+
+  white-space: nowrap;
+
+
+}
+
+
+
+
+
+/* =====================================
+ PROFIT BOX
+===================================== */
+
+
+.grosss-profit-section-2 {
+
+
+
+  border-radius: 12px;
+
+
+}
+
+
+
+
+
+/* Loading */
+
+
+.financial-statement-page>p {
+
+
+  text-align: center;
+
+
+  font-size: 20px;
+
+
+  font-weight: 600;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+ LARGE TABLETS
+===================================== */
+
+
+@media(max-width:1100px) {
+
+
+  .financial-statement-page-div {
+
+
+    grid-template-columns: repeat(2, 1fr);
+
+
+    gap: 20px;
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ TABLETS
+===================================== */
+
+
+@media(max-width:768px) {
+
+  
+
+  .financial-statement-page {
+
+
+    padding: 20px;
+
+
+  }
+
+
+
+  .fin-sect-title-h1 h1 {
+
+
+    font-size: 26px;
+
+
+  }
+
+
+
+
+
+  .financial-statement-page-div {
+
+
+    grid-template-columns: 1fr;
+
+
+    gap: 18px;
+
+
+  }
+
+
+
+
+
+
+  .financial-statement-section,
+  .financial-statement-expenses-section,
+  .financial-statement-revenue-section {
+
+
+    padding: 22px;
+
+
+    border-radius: 15px;
+
+
+  }
+
+
+
+
+
+
+
+  .financial-statement-section p,
+  .financial-statement-expenses-section p,
+  .financial-statement-revenue-section p {
+
+
+    font-size: 16px;
+
+
+  }
+
+
+
+
+
+  .financial-statement-section p:last-child,
+  .financial-statement-expenses-section p:last-child,
+  .financial-statement-revenue-section p:last-child {
+
+
+    font-size: 18px;
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ MOBILE
+===================================== */
+
+
+@media(max-width:480px) {
+
+  .financial-statement-section p strong,
+  .financial-statement-expenses-section p strong,
+  .financial-statement-revenue-section p strong {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    width: 100%;
+
+  }
+
+  .financial-statement-section p span,
+    .financial-statement-expenses-section p span,
+    .financial-statement-revenue-section p span{
+
+        display:block;
+
+        width:100%;
+
+        font-size:16px;
+
+    }
+
+
+
+  .financial-statement-page {
+
+
+    padding: 10px;
+
+
+  }
+
+
+
+
+  .fin-sect-title-h1 h1 {
+
+
+    font-size: 21px;
+
+
+  }
+
+
+
+
+
+
+  .financial-statement-section,
+  .financial-statement-expenses-section,
+  .financial-statement-revenue-section {
+
+
+    padding: 15px;
+
+
+    border-radius: 12px;
+
+
+  }
+
+
+
+
+
+
+
+  .financial-statement-section p,
+  .financial-statement-expenses-section p,
+  .financial-statement-revenue-section p {
+
+
+    flex-direction: column;
+
+
+    align-items: flex-start;
+
+
+    gap: 6px;
+
+
+    font-size: 14px;
+
+
+    padding: 10px 0;
+
+
+  }
+
+
+
+
+
+  .financial-statement-section span,
+  .financial-statement-expenses-section span,
+  .financial-statement-revenue-section span {
+
+
+    font-size: 14px;
+
+
+  }
+
+
+
+
+
+  .financial-statement-section p:last-child,
+  .financial-statement-expenses-section p:last-child,
+  .financial-statement-revenue-section p:last-child {
+
+
+    font-size: 16px;
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+ VERY SMALL DEVICES 250px-320px
+===================================== */
+
+
+@media(max-width:320px) {
+
+
+
+  .financial-statement-page {
+
+
+    padding: 6px;
+
+
+  }
+
+
+
+
+
+  .fin-sect-title-h1 h1 {
+
+
+    font-size: 18px;
+
+
+  }
+
+
+
+
+
+
+
+  .financial-statement-section,
+  .financial-statement-expenses-section,
+  .financial-statement-revenue-section {
+
+
+    padding: 10px;
+
+
+  }
+
+
+
+
+
+
+  .financial-statement-section p,
+  .financial-statement-expenses-section p,
+  .financial-statement-revenue-section p {
+
+
+    font-size: 12px;
+
+
+    gap: 5px;
+
+
+  }
+
+
+
+
+
+
+  .financial-statement-section span,
+  .financial-statement-expenses-section span,
+  .financial-statement-revenue-section span {
+
+
+    font-size: 12px;
+
+
+    white-space: normal;
+
+
+    overflow-wrap: anywhere;
+
+
+  }
+
+
+
+
+
+
+
+  .grosss-profit-section-2 {
+
+
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+ EXTREME SMALL 250px
+===================================== */
+
+
+@media(max-width:250px) {
+
+  .fin-sect-title-h1 h1 {
+
+
+    font-size: 16px;
+
+
+  }
+
+
+
+
+
+  .financial-statement-section p,
+  .financial-statement-expenses-section p,
+  .financial-statement-revenue-section p {
+
+
+    font-size: 11px;
+
+
+  }
+
+
+
+
+  .financial-statement-section span,
+  .financial-statement-expenses-section span,
+  .financial-statement-revenue-section span {
+
+
+    font-size: 11px;
+
+
+  }
+
+
+
+}

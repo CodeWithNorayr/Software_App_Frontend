@@ -1,0 +1,262 @@
+.delete-page{
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background:#eef3ff;
+
+  padding:30px;
+}
+
+.delete-card{
+
+  width:100%;
+
+  max-width:700px;
+
+  background:white;
+
+  border-radius:20px;
+
+  padding:40px;
+
+  box-shadow:
+  0 15px 45px rgba(0,0,0,.15);
+
+  text-align:center;
+}
+
+.delete-icon{
+
+  font-size:70px;
+
+  margin-bottom:20px;
+}
+
+.delete-card h1{
+
+  color:#d32f2f;
+
+  font-size:40px;
+
+  margin-bottom:20px;
+}
+
+.delete-description{
+
+  font-size:18px;
+
+  color:#555;
+
+  margin-bottom:30px;
+
+  line-height:1.7;
+}
+
+.delete-warning{
+
+  background:#fff4f4;
+
+  border:2px solid #ffcaca;
+
+  border-radius:15px;
+
+  padding:25px;
+
+  text-align:left;
+
+  margin-bottom:35px;
+}
+
+.delete-warning h3{
+
+  color:#d32f2f;
+
+  margin-bottom:15px;
+}
+
+.delete-warning ul{
+
+  padding-left:20px;
+}
+
+.delete-warning li{
+
+  margin-bottom:12px;
+
+  font-size:17px;
+
+  color:#444;
+
+  line-height:1.6;
+}
+
+.delete-buttons{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+.cancel-button{
+
+  width:180px;
+
+  height:52px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#d9d9d9;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.cancel-button:hover{
+
+  background:#bfbfbf;
+}
+
+.delete-account-button{
+
+  width:220px;
+
+  height:52px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#d32f2f;
+
+  color:white;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.delete-account-button:hover{
+
+  background:#b71c1c;
+
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 10px 20px rgba(211,47,47,.3);
+}
+
+@media(max-width:768px){
+
+.delete-card{
+
+  padding:25px;
+}
+
+.delete-card h1{
+
+  font-size:30px;
+}
+
+.delete-description{
+
+  font-size:16px;
+}
+
+.delete-warning li{
+
+  font-size:15px;
+}
+
+.cancel-button,
+.delete-account-button{
+
+  width:100%;
+}
+
+/* ===============================
+   Mobile (420px and below)
+================================= */
+
+@media (max-width: 420px) {
+
+  .delete-page {
+    padding: 15px;
+  }
+
+  .delete-card {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  .delete-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  .delete-card h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .delete-description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .delete-warning {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  .delete-warning h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .delete-warning ul {
+    padding-left: 18px;
+  }
+
+  .delete-warning li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .delete-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cancel-button,
+  .delete-account-button {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+  }
+}
+}

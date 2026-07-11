@@ -1,0 +1,644 @@
+/* ==========================================================
+   CHARTS.CSS
+   PART 1
+========================================================== */
+
+/* Reset */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.chart-full-section{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+    gap:24px;
+
+    padding:24px;
+
+    align-items:stretch;
+
+}
+
+/* ==========================================================
+   CARD BASE
+========================================================== */
+
+.chart-container,
+.pie-chart-container,
+.pie-chart-expense-container,
+.vertical-chart-container,
+.area-chart-expenses,
+.area-chart-revenue{
+
+    width:100%;
+
+    min-width:0;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ==========================================================
+   LARGE CHARTS
+========================================================== */
+
+.chart-container,
+.pie-chart-container,
+.pie-chart-expense-container,
+.vertical-chart-container{
+
+    height:560px;
+
+    padding:18px;
+
+}
+
+/* ==========================================================
+   SMALL CHARTS
+========================================================== */
+
+.area-chart-expenses,
+.area-chart-revenue{
+
+    height:420px;
+
+    padding:18px;
+
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.chart-container:hover,
+.pie-chart-container:hover,
+.pie-chart-expense-container:hover,
+.vertical-chart-container:hover,
+.area-chart-expenses:hover,
+.area-chart-revenue:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================================
+   CANVAS
+========================================================== */
+
+.chart-container canvas,
+.pie-chart-container canvas,
+.pie-chart-expense-container canvas,
+.vertical-chart-container canvas,
+.area-chart-expenses canvas,
+.area-chart-revenue canvas{
+
+    width:100% !important;
+
+    height:100% !important;
+
+}
+
+/* ==========================================================
+   SIMPLE ANIMATION
+========================================================== */
+
+.chart-container{
+
+    animation:chartBackground 20s linear infinite alternate;
+
+}
+
+@keyframes chartBackground{
+
+    from{
+
+        background:#ffffff;
+
+    }
+
+    to{
+
+        background:#f9fcff;
+
+    }
+
+}
+
+/* ==========================================================
+   LARGE LAPTOPS
+========================================================== */
+
+@media (max-width:1400px){
+
+.chart-full-section{
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(380px,1fr));
+
+}
+
+.chart-container,
+.pie-chart-container,
+.pie-chart-expense-container,
+.vertical-chart-container{
+
+    height:520px;
+
+}
+
+.area-chart-expenses,
+.area-chart-revenue{
+
+    height:390px;
+
+}
+
+}
+
+/* ==========================================================
+   TABLETS
+========================================================== */
+
+@media (max-width:1100px){
+
+.chart-full-section{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+    padding:18px;
+
+}
+
+.chart-container,
+.pie-chart-container,
+.pie-chart-expense-container,
+.vertical-chart-container{
+
+    height:500px;
+
+    padding:16px;
+
+}
+
+.area-chart-expenses,
+.area-chart-revenue{
+
+    height:360px;
+
+    padding:16px;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:768px){
+
+.chart-full-section{
+
+    width:100%;
+
+    padding:10px;
+
+    gap:16px;
+
+}
+
+.chart-container,
+.pie-chart-container,
+.pie-chart-expense-container,
+.vertical-chart-container{
+
+    width:100%;
+
+    height:480px;
+
+    padding:10px;
+
+    border-radius:14px;
+
+}
+
+.area-chart-expenses,
+.area-chart-revenue{
+
+    width:100%;
+
+    height:340px;
+
+    padding:10px;
+
+    border-radius:14px;
+
+}
+
+}
+
+/* ==========================================================
+   SMALL PHONES (480px)
+========================================================== */
+
+@media (max-width:480px){
+
+    .chart-full-section{
+    
+        width:100%;
+    
+        padding:6px;
+    
+        gap:12px;
+    
+    }
+    
+    .chart-container,
+    .pie-chart-container,
+    .pie-chart-expense-container,
+    .vertical-chart-container{
+    
+        width:100%;
+    
+        min-width:100%;
+    
+        height:420px;
+    
+        padding:8px;
+    
+        border-radius:10px;
+    
+    }
+    
+    .area-chart-expenses,
+    .area-chart-revenue{
+    
+        width:100%;
+    
+        min-width:100%;
+    
+        height:320px;
+    
+        padding:8px;
+    
+        border-radius:10px;
+    
+    }
+    
+    }
+    
+    /* ==========================================================
+       EXTRA SMALL PHONES (360px)
+    ========================================================== */
+    
+    /* ==========================================================
+   SMALL PHONES - 360px
+========================================================== */
+
+@media (max-width:360px){
+
+    .chart-full-section{
+    
+        width:100%;
+    
+        display:block;
+    
+        margin:0;
+    
+        overflow-x:hidden;
+    
+    }
+    
+    
+    /* MAIN CHARTS */
+    
+    .chart-container,
+    .pie-chart-container,
+    .pie-chart-expense-container,
+    .vertical-chart-container{
+    
+        width:100%;
+    
+        height:420px;
+    
+        margin:0 0 14px 0;
+    
+        padding:4px;
+    
+        border-radius:8px;
+    
+        overflow:visible;
+    
+    }
+    
+    
+    /* AREA CHARTS */
+    
+    .area-chart-expenses,
+    .area-chart-revenue{
+    
+        width:100%px;
+    
+        height:320px;
+    
+        margin:0 0 14px 0;
+    
+        padding:4px;
+    
+        border-radius:8px;
+    
+        overflow:visible;
+    
+    }
+    
+    
+    /* CANVAS */
+    
+    .chart-container canvas,
+    .pie-chart-container canvas,
+    .pie-chart-expense-container canvas,
+    .vertical-chart-container canvas,
+    .area-chart-expenses canvas,
+    .area-chart-revenue canvas{
+    
+        width:100% !important;
+    
+        height:100% !important;
+    
+    }
+    
+    }
+    
+    
+    
+    /* ==========================================================
+       ULTRA SMALL - 250px
+    ========================================================== */
+    
+    @media (max-width:250px){
+    
+    .chart-full-section{
+    
+        width:100%;
+    
+        display:block;
+    
+        padding:0;
+    
+    }
+    
+    
+    /* MAIN CHARTS */
+    
+    .chart-container,
+    .pie-chart-container,
+    .pie-chart-expense-container,
+    .vertical-chart-container{
+    
+        width:100vw;
+    
+        height:200px;
+    
+        margin:0 0 12px 0;
+    
+        padding:0;
+    
+        border-radius:0;
+    
+    }
+    
+    
+    /* AREA CHARTS */
+    
+    .area-chart-expenses,
+    .area-chart-revenue{
+    
+        width:100vw;
+    
+        height:300px;
+    
+        margin:0 0 12px 0;
+    
+        padding:0;
+    
+        border-radius:0;
+    
+    }
+    
+    
+    /* CANVAS */
+    
+    .chart-container canvas,
+    .pie-chart-container canvas,
+    .pie-chart-expense-container canvas,
+    .vertical-chart-container canvas,
+    .area-chart-expenses canvas,
+    .area-chart-revenue canvas{
+    
+        width:100% !important;
+    
+        height:100% !important;
+    
+    }
+    
+    }
+    
+    /* ==========================================================
+       250px DEVICES
+    ========================================================== */
+    
+    /* ==========================================================
+   250px ULTRA SMALL DEVICES
+========================================================== */
+
+@media (max-width:250px){
+
+    .chart-full-section{
+    
+        width:100%;
+    
+        display:block;
+    
+        padding:0;
+    
+        margin:0;
+    
+    }
+    
+    
+    /* MAIN CHART CARDS */
+    
+    .chart-container,
+    .pie-chart-container,
+    .pie-chart-expense-container,
+    .vertical-chart-container{
+    
+        width:100%;
+    
+        height:420px;
+    
+        margin:0 0 12px 0;
+    
+        padding:0;
+    
+        border-radius:0;
+    
+        overflow:visible;
+    
+    }
+    
+    
+    /* AREA CHARTS */
+    
+    .area-chart-expenses,
+    .area-chart-revenue{
+    
+        width:100%;
+    
+        height:320px;
+    
+        margin:0 0 12px 0;
+    
+        padding:0;
+    
+        border-radius:0;
+    
+        overflow:visible;
+    
+    }
+    
+    
+    /* REMOVE INTERNAL SHRINKING */
+    
+    .chart-container canvas,
+    .pie-chart-container canvas,
+    .pie-chart-expense-container canvas,
+    .vertical-chart-container canvas,
+    .area-chart-expenses canvas,
+    .area-chart-revenue canvas{
+    
+        width:100% !important;
+    
+        height:100% !important;
+    
+    }
+    
+    
+    /* REMOVE HOVER MOVEMENT */
+    
+    .chart-container:hover,
+    .pie-chart-container:hover,
+    .pie-chart-expense-container:hover,
+    .vertical-chart-container:hover,
+    .area-chart-expenses:hover,
+    .area-chart-revenue:hover{
+    
+        transform:none;
+    
+    }
+    
+    
+    }
+    
+    /* ==========================================================
+       CHART.JS CANVAS
+    ========================================================== */
+    
+    .chart-container canvas,
+    .pie-chart-container canvas,
+    .pie-chart-expense-container canvas,
+    .vertical-chart-container canvas,
+    .area-chart-expenses canvas,
+    .area-chart-revenue canvas{
+    
+        display:block !important;
+    
+        width:100% !important;
+    
+        height:100% !important;
+    
+    }
+    
+    /* ==========================================================
+       CARD CONTENT
+    ========================================================== */
+    
+    .chart-container > *,
+    .pie-chart-container > *,
+    .pie-chart-expense-container > *,
+    .vertical-chart-container > *,
+    .area-chart-expenses > *,
+    .area-chart-revenue > *{
+    
+        width:100%;
+    
+        height:100%;
+    
+    }
+    
+    /* ==========================================================
+       SCROLL FIX
+    ========================================================== */
+    
+    .chart-full-section{
+    
+        overflow-x:hidden;
+    
+    }
+    
+    /* ==========================================================
+       TOUCH DEVICES
+    ========================================================== */
+    
+    @media (hover:none){
+    
+    .chart-container:hover,
+    .pie-chart-container:hover,
+    .pie-chart-expense-container:hover,
+    .vertical-chart-container:hover,
+    .area-chart-expenses:hover,
+    .area-chart-revenue:hover{
+    
+        transform:none;
+    
+        box-shadow:0 10px 25px rgba(0,0,0,.08);
+    
+    }
+    
+    }

@@ -1,0 +1,1013 @@
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+
+.expenses-container {
+
+
+  width:100%;
+
+  min-height:100vh;
+
+  padding:40px;
+
+  box-sizing:border-box;
+
+  background:#f5f7fb;
+
+  overflow-x:hidden;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+ HEADER
+===================================== */
+
+
+.expenses-header {
+
+
+  max-width:1200px;
+
+  margin:0 auto 35px;
+
+  text-align:center;
+
+
+}
+
+
+
+.expenses-header h2 {
+
+
+  margin:0;
+
+  font-size:36px;
+
+  color:#111827;
+
+  font-weight:800;
+
+
+}
+
+
+
+
+.expenses-header p {
+
+
+  margin-top:10px;
+
+  font-size:18px;
+
+  color:#6b7280;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ NAV BUTTONS
+===================================== */
+
+
+.exp-rev-btn {
+
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:15px;
+
+  margin-top:25px;
+
+
+}
+
+
+
+
+
+.exp-rev-btn button {
+
+
+  padding:12px 30px;
+
+  border:none;
+
+  border-radius:12px;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s ease;
+
+
+}
+
+
+
+
+
+#rev-btn-trans {
+
+
+  background:#2563eb;
+
+  color:white;
+
+
+}
+
+
+
+
+#exp-btn-trans {
+
+
+  background:#ef4444;
+
+  color:white;
+
+
+}
+
+
+
+
+
+.exp-rev-btn button:hover {
+
+
+  transform:translateY(-3px);
+
+  opacity:.9;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+ GRID
+===================================== */
+
+
+.expenses-grid {
+
+
+  width:100%;
+
+
+
+
+  display:grid;
+
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ CARD
+===================================== */
+
+
+.expense-card {
+
+
+  background:white;
+
+
+  padding:25px;
+
+
+  border-radius:18px;
+
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+
+  border:1px solid rgba(0,0,0,.05);
+
+
+  transition:.3s ease;
+
+
+  display:flex;
+
+
+  flex-direction:column;
+
+
+  min-width:0;
+
+
+}
+
+
+
+
+
+.expense-card:hover {
+
+
+  transform:translateY(-6px);
+
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,.12);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ CARD HEADER
+===================================== */
+
+
+.expense-card-header {
+
+
+  display:flex;
+
+
+  justify-content:space-between;
+
+
+  align-items:flex-start;
+
+
+  gap:15px;
+
+
+}
+
+
+
+
+
+.expense-card-header h3 {
+
+
+  margin:0;
+
+
+  font-size:22px;
+
+
+  color:#1f2937;
+
+
+  overflow-wrap:anywhere;
+
+
+}
+
+
+
+
+
+
+.expense-category {
+
+
+  background:#dbeafe;
+
+
+  color:#2563eb;
+
+
+  padding:6px 12px;
+
+
+  border-radius:20px;
+
+
+  font-size:13px;
+
+
+  font-weight:700;
+
+
+  white-space:nowrap;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+ DESCRIPTION
+===================================== */
+
+
+.expense-description {
+
+
+  margin:20px 0;
+
+
+  color:#4b5563;
+
+
+  font-size:16px;
+
+
+  line-height:1.5;
+
+
+  overflow-wrap:anywhere;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ DETAILS
+===================================== */
+
+
+.expense-details {
+
+
+  display:flex;
+
+
+  justify-content:space-between;
+
+
+  gap:15px;
+
+
+  margin-top:auto;
+
+
+}
+
+
+
+
+
+.expense-item {
+
+
+  display:flex;
+
+
+  flex-direction:column;
+
+
+  gap:5px;
+
+
+}
+
+
+
+
+
+.expense-item span {
+
+
+  color:#6b7280;
+
+
+  font-size:14px;
+
+
+}
+
+
+
+
+.expense-item strong {
+
+
+  font-size:20px;
+
+
+  color:#2563eb;
+
+
+  overflow-wrap:anywhere;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ DELETE BUTTON
+===================================== */
+
+
+.deleting-expense-button {
+
+
+  margin-top:25px;
+
+
+  width:100%;
+
+
+  padding:12px;
+
+
+  border:none;
+
+
+  border-radius:12px;
+
+
+  background:#ef4444;
+
+
+  color:white;
+
+
+  font-size:16px;
+
+
+  font-weight:700;
+
+
+  cursor:pointer;
+
+
+  transition:.3s ease;
+
+
+}
+
+
+
+
+
+.deleting-expense-button:hover {
+
+
+  background:#dc2626;
+
+
+  transform:translateY(-2px);
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+ LOADING
+===================================== */
+
+
+.expense-loading,
+.no-expense {
+
+
+  width:100%;
+
+
+  min-height:300px;
+
+
+  display:flex;
+
+
+  justify-content:center;
+
+
+  align-items:center;
+
+
+}
+
+
+
+
+.expense-loading p,
+.no-expense p {
+
+
+  font-size:22px;
+
+
+  font-weight:700;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ TABLETS
+===================================== */
+
+
+@media(max-width:1100px){
+
+
+  .expenses-grid {
+
+
+      grid-template-columns:
+      repeat(2,1fr);
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ MOBILE
+===================================== */
+
+
+@media(max-width:768px){
+
+
+
+  .expenses-container {
+
+
+      padding:20px;
+
+
+  }
+
+
+
+
+
+  .expenses-header h2 {
+
+
+      font-size:28px;
+
+
+  }
+
+
+
+
+
+  .expenses-header p {
+
+
+      font-size:15px;
+
+
+  }
+
+
+
+
+
+
+  .expenses-grid {
+
+
+      grid-template-columns:1fr;
+
+
+      gap:18px;
+
+
+  }
+
+
+
+
+
+
+  .expense-card {
+
+
+      padding:20px;
+
+
+  }
+
+
+
+
+
+
+  .expense-card-header {
+
+
+      flex-direction:column;
+
+
+      gap:10px;
+
+
+  }
+
+
+
+
+
+
+  .expense-category {
+
+
+      font-size:12px;
+
+
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ SMALL MOBILE
+===================================== */
+
+
+@media(max-width:480px){
+
+
+
+  .expenses-container {
+
+
+      padding:12px;
+
+
+  }
+
+
+
+
+
+
+  .expenses-header h2 {
+
+
+      font-size:22px;
+
+
+  }
+
+
+
+
+
+
+  .exp-rev-btn {
+
+
+      flex-direction:column;
+
+
+  }
+
+
+
+
+
+
+  .exp-rev-btn button {
+
+
+      width:100%;
+
+
+      font-size:14px;
+
+
+  }
+
+
+
+
+
+
+  .expense-card {
+
+
+      padding:15px;
+
+
+      border-radius:14px;
+
+
+  }
+
+
+
+
+
+
+  .expense-card-header h3 {
+
+
+      font-size:18px;
+
+
+  }
+
+
+
+
+
+
+
+  .expense-description {
+
+
+      font-size:14px;
+
+
+  }
+
+
+
+
+
+
+  .expense-details {
+
+
+      flex-direction:column;
+
+
+      gap:12px;
+
+
+  }
+
+
+
+
+
+
+  .expense-item strong {
+
+
+      font-size:16px;
+
+
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+ VERY SMALL DEVICES 250px-320px
+===================================== */
+
+
+@media(max-width:320px){
+
+
+
+  .expenses-container {
+
+
+      padding:6px;
+
+
+  }
+
+
+
+
+
+
+  .expenses-header h2 {
+
+
+      font-size:18px;
+
+
+  }
+
+
+
+
+
+
+  .expenses-header p {
+
+
+      font-size:12px;
+
+
+  }
+
+
+
+
+
+
+  .expense-card {
+
+
+      padding:10px;
+
+
+  }
+
+
+
+
+
+
+
+  .expense-card-header h3 {
+
+
+      font-size:15px;
+
+
+  }
+
+
+
+
+
+
+
+  .expense-category {
+
+
+      font-size:10px;
+
+
+      padding:5px 8px;
+
+
+  }
+
+
+
+
+
+
+
+  .expense-description {
+
+
+      font-size:12px;
+
+
+  }
+
+
+
+
+
+
+  .expense-item span {
+
+
+      font-size:11px;
+
+
+  }
+
+
+
+
+
+
+  .expense-item strong {
+
+
+      font-size:14px;
+
+
+  }
+
+
+
+
+
+
+  .deleting-expense-button {
+
+
+      font-size:13px;
+
+
+      padding:10px;
+
+
+  }
+
+
+
+}
