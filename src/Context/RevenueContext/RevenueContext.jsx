@@ -10,7 +10,7 @@ export const RevenueContextProvider = ({ children }) => {
 
   const {id} = useParams();
 
-  const backendURL = "http://localhost:3000";
+  const backendURL = "https://finly-software-app-backend.onrender.com";
 
   const { token, setToken } = useContext(StoreContext);
 
