@@ -21,6 +21,7 @@ const App = () => {
     <div>
       <ToastContainer />
       <Routes>
+        <Route path="/" element={<UserRegistration />} />
         <Route path='/user-registration' element={<UserRegistration />} />
         <Route path='/user-login' element={<UserLogin />} />
         <Route path='/user-delete/:id' element={<UserProtectedRoute><UserDelete /></UserProtectedRoute>} />
